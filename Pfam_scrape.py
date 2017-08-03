@@ -16,7 +16,7 @@ def get_domains(domains_table):
     soup = BeautifulSoup(str(domains_table), "lxml")
     table = soup.find("table")
     # The first tr contains the field names, uncomment this if you need the headings.
-    #headings = [th.get_text() for th in table.find("tr").find_all("th")]
+    # headings = [th.get_text() for th in table.find("tr").find_all("th")]
 
     # Get the rows of the table, and find the domains.
     rows = table.find_all('tr')
